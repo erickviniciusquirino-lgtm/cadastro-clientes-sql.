@@ -1,49 +1,34 @@
--- PROJETO: SISTEMA DE CADASTRO DE CLIENTES
--- AUTOR: ERIK VINÍCIUS NUNES DE SOUZA
+Sistema de Cadastro de Clientes
 
--- 1. Criar o banco de dados
-CREATE DATABASE cadastro_clientes;
+Sobre o projeto
 
--- 2. Selecionar o banco de dados
-USE cadastro_clientes;
+Projeto acadêmico desenvolvido para praticar conceitos de banco de dados relacionais utilizando SQL.
 
--- 3. Criar a tabela de clientes
-CREATE TABLE clientes (
-    id_cliente INT PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL UNIQUE,
-    telefone VARCHAR(20),
-    cidade VARCHAR(60)
-);
+Tecnologias utilizadas
 
--- 4. Cadastrar clientes
-INSERT INTO clientes (nome, email, telefone, cidade)
-VALUES
-('João Silva', 'joao@email.com', '61999990001', 'Brasília'),
-('Maria Souza', 'maria@email.com', '61999990002', 'Taguatinga'),
-('Pedro Santos', 'pedro@email.com', '61999990003', 'Planaltina'),
-('Ana Oliveira', 'ana@email.com', '61999990004', 'Ceilândia');
+* SQL
+* MySQL
+* Banco de dados relacional
 
--- 5. Consultar todos os clientes
-SELECT * FROM clientes;
+Funcionalidades
 
--- 6. Consultar clientes de Brasília
-SELECT * FROM clientes
-WHERE cidade = 'Brasília';
+* Criação do banco de dados.
+* Cadastro de clientes.
+* Consulta de clientes.
+* Pesquisa utilizando LIKE.
+* Ordenação de registros.
+* Atualização e exclusão de dados.
 
--- 7. Pesquisar clientes pelo nome
-SELECT * FROM clientes
-WHERE nome LIKE 'M%';
+Como executar
 
--- 8. Ordenar clientes por nome
-SELECT * FROM clientes
-ORDER BY nome ASC;
+1. Abra o arquivo cadastro-clientes.sql em um sistema compatível com MySQL.
+2. Execute os comandos SQL.
+3. Utilize as consultas para visualizar os dados cadastrados.
 
--- 9. Atualizar telefone de um cliente
-UPDATE clientes
-SET telefone = '61988880001'
-WHERE id_cliente = 1;
+Autor
 
--- 10. Excluir um cliente
-DELETE FROM clientes
-WHERE id_cliente = 4;
+Erik Vinícius Nunes de Souza
+
+Estudante de Análise e Desenvolvimento de Sistemas (ADS).
+
+Projeto desenvolvido para fins acadêmicos.
